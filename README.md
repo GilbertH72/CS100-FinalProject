@@ -19,16 +19,22 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group.
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include
- > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * [toolname](link) - Short description
- > * What will be the input/output of your project?
- > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
- >   * Why you picked this pattern and what feature you will implement with it
- >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
- >   * Why the chosen design pattern will lead to a good solution to that problem
- > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+> Our project is going to be an RPG or Role Playing game. The game will involve choosing among certain characters to play as. The characters are associated with different types > of weapons and armors. At each step of the game, a narrative is presented and the user can select between different options such as the following: attack, run, access inventory and heal the character).
+
+> **Why is it important or interesting to you?**
+> * This project is interesting to us as we all have ample experience playing RPG games. We feel this not only will give us a deeper understanding on how to code this project, but > it will also make it a very fun and enjoyable experience. 
+
+> **What languages/tools/technologies do you plan to use?**
+> * The language we plan to use is C++, while the tools we plan to use are valgrind for potential memory leaks and googletest for unit testing towards our implementations of classes with various inputs.
+
+> **What will be the input/output of your project?**
+> * Since the RPG will be solely text based, the input/output of the project will involve interacting with the game through certain key inputs (example being A for Attack, I for Inventory, R for Run during battle), otherwise when prompted to make a choice it'll be a numeric input to decide the next move for in-game progression.
+
+> **What are the design patterns you will be using?**
+> * A design pattern that'll be used for our project is the composite pattern. We picked this pattern because of the benefit of using an individual object in the same way as the collection of certain individual objects. Something that may be encountered when implementing the project will involve the treatment of what properties an item will have. However, by using the composite pattern, we'd be able to apply an item's properties to the collection of those individual objects. This would be a good solution for dealing with object properties and make it simple to work with a larger object, which is composed of smaller, more independent objects.
+
+> * The characters and their stats can be made utilizing a strategy pattern. This pattern can be used to dynamically change an algorithm used by an object at run time. We will be using interfaces to create different behaviors for the character classes. Some troubles we might run into during this process would be if a character does not do it’s expected behavior.
+
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
