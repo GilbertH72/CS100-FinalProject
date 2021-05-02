@@ -4,7 +4,7 @@
 # Text-Based RPG
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: \<[Derrason Towery](https://github.com/Dtowery98)\> \<[Gilbert Hernandez](https://github.com/GilbertH72)\> \<[Albert Tedjo](https://github.com/atedj001)\>
+ > Authors: \[Derrason Towery](https://github.com/Dtowery98)\ \[Gilbert Hernandez](https://github.com/GilbertH72)\ \[Albert Tedjo](https://github.com/atedj001)\
  >  
  
  > You will be forming a group of **THREE** students and working on an interesting project. A list of proposed project ideas that have been successful in previous quarters is given in the project specifications link on iLearn. You can select an idea from the list, start thinking about the features you will implement, what design patterns can help you implement them, and why. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal. Your project needs to implement two design patterns.The project work should be divided almost equally among team members and each member is expected to work on at least one design pattern (more than one partner may work on a pattern) and some of its test cases. You can of course help each other, but it needs to be clear who will be responsible for which patterns and for which features.
@@ -19,7 +19,7 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group.
 
 ## Project Description
-> Our project is going to be an RPG or Role Playing game. The game will involve choosing among certain characters to play as. The characters are associated with different types > of weapons and armors. At each step of the game, a narrative is presented and the user can select between different options such as the following: attack, run, access inventory and heal the character).
+Our project is going to be an RPG or Role Playing game. The game will involve choosing among certain characters to play as. The characters are associated with different types > of weapons and armors. At each step of the game, a narrative is presented and the user can select between different options such as the following: attack, run, access inventory and heal the character).
 
 > **Why is it important or interesting to you?**
 > * This project is interesting to us as we all have ample experience playing RPG games. We feel this not only will give us a deeper understanding on how to code this project, but > it will also make it a very fun and enjoyable experience. 
