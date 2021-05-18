@@ -25,6 +25,6 @@ class Enemy {
         void loseHPSkill(CharacterClass* player) {
             health = health - player->skilldmg; // damage from player skill (not affected by defense);
         }
-}
+};
 
 #endif
