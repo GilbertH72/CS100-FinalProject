@@ -7,9 +7,10 @@ class Enemy {
         int health;
         int attack;
         int defense;
+	int level;
 	int giveExp;
     public:
-        Enemy(std::string n, int hp, int atk, int def, int spd, int exp) : name(n), health(hp), defense(def), speed(spd), giveExp(exp) { }
+        Enemy(std::string n, int hp, int atk, int def, int lvl, int exp) : name(n), health(hp), defense(def), int level(lvl), giveExp(exp) { }
 
         std::string getName() { return name; }
 
@@ -18,6 +19,8 @@ class Enemy {
         int getAttack() { return attack; }
 
         int getDefense() { return defense; }
+
+	int getLevel() { return level; }
 
 	int getExp() { return giveExp; }
 
