@@ -3,14 +3,15 @@
 
 class Enemy {
     private:
-        string name;
+        std::string name;
         int health;
         int attack;
         int defense;
+	int giveExp;
     public:
-        Enemy(string n, int hp, int atk, int def, int spd) : name(n), health(hp), defense(def), speed(spd) { }
+        Enemy(std::string n, int hp, int atk, int def, int spd, int exp) : name(n), health(hp), defense(def), speed(spd), giveExp(exp) { }
 
-        string getName() { return name; }
+        std::string getName() { return name; }
 
         int getHealth() { return health; }
 
@@ -18,12 +19,10 @@ class Enemy {
 
         int getDefense() { return defense; }
 
+	int getExp() { return giveExp; }
+
         void loseHP(CharacterClass* player) { // needs character class
             health = health - ((player->dmg * player->dmg)/(player->dmg + defense)); // damage formula for regular attack against enemy;
-        }
-
-        void loseHPSkill(CharacterClass* player) {
-            health = health - player->skilldmg; // damage from player skill (not affected by defense);
         }
 };
 
