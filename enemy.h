@@ -10,7 +10,7 @@ class Enemy {
 	int level;
 	int giveExp;
     public:
-        Enemy(std::string n, int hp, int atk, int def, int lvl, int exp) : name(n), health(hp), attack(atk), defense(def), level(lvl), giveExp(exp) { }
+        Enemy() { }
 
         std::string getName() { return name; }
 
@@ -24,7 +24,7 @@ class Enemy {
 
 	int getExp() { return giveExp; }
 
-        void loseHP(CharacterClass player) { // needs character class
+        void loseHP(Player player) { // needs character class
             health = health - ((player.getAttack() * player.getAttack())/(player.getAttack() + defense)); // damage formula for regular attack against enemy;
         }
 
@@ -35,6 +35,96 @@ class Enemy {
             else {
                 return false;
             }
+        }
+};
+
+class Slime : public Enemy {
+    public:
+        Slime() {
+            name = "Slime";
+            health = 10;
+            attack = 5;
+            defense = 5;
+        }
+};
+
+class Bat : public Enemy {
+    public:
+        Bat() {
+            name = "Bat";
+            health = 15;
+            attack = 5;
+            defense = 5;
+        }
+};
+
+class Goblin : public Enemy {
+    public:
+        Goblin() {
+            name = "Goblin";
+            health = 20;
+            attack = 5;
+            defense = 5;
+        }
+}
+
+class Spider : public Enemy {
+    public:
+        Spider() {
+            name = "Spider";
+            health = 20;
+            attack = 10;
+            defense = 5;
+        }
+};
+
+class Zombie : public Enemy {
+    public:
+        Zombie() {
+            name = "Zombie";
+            health = 30;
+            attack = 10;
+            defense = 20;
+        }
+};
+
+class Skeleton : public Enemy {
+    public:
+        Skeleton() {
+            name = "Skeleton";
+            health = 30;
+            attack = 20;
+            defense = 10;
+        }
+};
+
+class Troll : public Enemy {
+    public:
+        Troll() {
+            name = "Troll";
+            health = 50;
+            attack = 25;
+            defense = 25;
+        }
+};
+
+class Orc : public Enemy {
+    public:
+        Orc() {
+            name = "Orc";
+            health = 100;
+            attack = 30;
+            defense = 30;
+        }
+};
+
+class Dragon : public Enemy {
+    public:
+        Dragon() {
+            name = "Dragon";
+            health = 150;
+            attack = 50;
+            defense = 50;
         }
 };
 
