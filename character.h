@@ -35,7 +35,7 @@
         void storeEquipment(Equips equip);
         void CheckInventory();
         virtual void gainExp() = 0;
-        void getAttack(Enemy* e, int rand);
+        int  getAttack(Enemy* e, int rand);
         void loseHP(Enemy* e, int rand);
 
     };
