@@ -10,9 +10,9 @@ Warrior::Warrior() {
             maxExp = 100;
         }
 
-void Warrior::gainExp(Enemy enemy) {
-    if (enemy.isDead()) {
-        currentExp += enemy.getXP();
+void Warrior::gainExp(Enemy* enemy) {
+    if (enemy->isDead()) {
+        currentExp += enemy->getXP();
         if (currentExp >= maxExp) {
             std::cout << "Level Up!" << endl;
             level++;
@@ -26,3 +26,5 @@ void Warrior::gainExp(Enemy enemy) {
             maxExp += 50;
         }
     }
+    delete enemy;
+}
