@@ -16,7 +16,10 @@ class Enemy {
 
         int getHealth() { return health; }
 
-        int getAttack() { return attack; }
+        int getAttack(Player* p, int rand) {
+            int atk = attack + rand; 
+            return ((atk * atk) / (atk + p->getDefense())); 
+        }
 
         int getDefense() { return defense; }
 
@@ -24,8 +27,16 @@ class Enemy {
 
 	int getExp() { return giveExp; }
 
-        void loseHP(Player player) { // needs character class
-            health = health - ((player.getAttack() * player.getAttack())/(player.getAttack() + defense)); // damage formula for regular attack against enemy;
+	void displayStats() {
+            std::cout << "Enemy: " << name << std::endl;
+            std::cout << "Health: " << health << std::endl;
+            std::cout << "Attack: " << attack << std::endl;
+            std::cout << "Defense: " << defense << std::endl;
+        }
+
+        void loseHP(Player* player, int rand) {
+            int atk = attack + rand; 
+            health -= ((atk * atk) / (atk + p->getDefense()));
         }
 
 	bool isDead() {
