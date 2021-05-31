@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 
+#include "enemy.h"
+
 
     class Player
     {   
@@ -33,8 +35,8 @@
         void storeEquipment(Equips equip);
         void CheckInventory();
         virtual void gainExp() = 0;
-        void getAttack();
-        void loseHP(Enemy enemy);
+        void getAttack(Enemy* e, int rand);
+        void loseHP(Enemy* e, int rand);
 
     };
 

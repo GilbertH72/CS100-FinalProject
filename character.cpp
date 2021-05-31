@@ -25,6 +25,7 @@ void Player::useHealthItem(Health_Item item) {
     else {
         health = maxHealth;
     }
+    healthItemNumber--;
 }
 
 void Player::storeEquipment(Equips equip) {
@@ -39,8 +40,12 @@ void Player::checkInventory() {
     std::cout << healthItemNumber << "potions" << std::endl;
 }
 
-void Player::getAttack() { return attack; }
+int Player::getAttack(Enemy* e, int rand) {
+    int atk = attack + rand; 
+    return ((atk * atk) / (atk + e.getDefense())); 
+}
 
-void Player::loseHP(Enemy enemy) {
-    health -= ((enemy.getAttack() * enemy.getAttack())/(enemy.getAttack() + defense);
+void Player::loseHP(Enemy* e, int rand) {
+    int atk = e->getAttack() + rand;
+    health -= ((atk * atk)/(atk + defense);
 }
