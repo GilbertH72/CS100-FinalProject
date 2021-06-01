@@ -1,10 +1,10 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef __PLAYER_H__
+#define __PLAYER_H__
 
 #include <iostream>
 #include <vector>
 
-#include "enemy.h"
+#include "Enemy.h"
 
 
     class Player
