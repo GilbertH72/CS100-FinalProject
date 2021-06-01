@@ -1,0 +1,7 @@
+Basic
+Rookie
+Novice
+Great
+Artisan
+Epic
+Legendary
