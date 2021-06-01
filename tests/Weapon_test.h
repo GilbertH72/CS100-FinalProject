@@ -1,7 +1,7 @@
 #ifndef __WEAPON_TEST_H__
 #define __WEAPON_TEST_H__
 
-#include "../src/Equips.cpp"
+#include "../header/Equips.h"
 #include "../header/Weapon.h"
 #include "../header/Hammer.h"
 #include "../header/Sword.h"

@@ -1,9 +1,9 @@
-#include "../header/Warrior.h"
-#include "../header/WarriorAttackStrat.h"
+#include "../header/Mage.h"
+#include "../header/MageAttackStrat.h"
 
-Warrior::Warrior(std::string, playerType role)
+Mage::Mage(std::string, playerType role)
 {
-   this->attackStrat = new WarriorAttackStrat();
+   this->attackStrat = new MageAttackStrat();
    this->torsoEQ = nullptr;
    this->legEQ = nullptr;
    this->weaponEQ = nullptr;
@@ -18,7 +18,7 @@ Warrior::Warrior(std::string, playerType role)
    this->maxEXP = 100;
 }
 
-Warrior::~Warrior()
+Mage::~Mage()
 {
    delete attackStrat;
    delete torsoEQ;
@@ -26,7 +26,8 @@ Warrior::~Warrior()
    delete weaponEQ;
 }
 
-int Warrior::attack(Enemy* currentEnemy)
+
+int Mage::attack(Enemy* currentEnemy)
 {
    try
    {
@@ -40,17 +41,18 @@ int Warrior::attack(Enemy* currentEnemy)
    }
 }
 
-void Warrior::levelUp()
+void Mage::levelUp()
 {
    while (currentEXP >= maxEXP)
    {
       std::cout << "You Leveled up! Congrats!" << std::endl;
       this->maxHP += 3;
       this->currentHP += 3;
-      this->atck += 5;
+      this->atck += 3;
       this->defense += 3;
       this->level += 1;
       this->currentEXP -= this->maxEXP;
       this->maxEXP += 25;
    }
 }
+

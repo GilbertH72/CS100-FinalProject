@@ -13,16 +13,30 @@ protected:
    int charRole;
    
 public:
-   Equips();
-   Equips(int level, int typeStatus, int charRole);
+   Equips()
+   {
+      // For minimum level to equip Weapon/Armor, value for stat increase
+      // And role for corrsponding character
+      this->level = 1;
+      this->value = 5;
+      this->charRole = 0;
+   }
+
+   Equips(int level, int typeStatus, int charRole)
+   {
+      // Sample calculation for value (Adjustment may be done later on)
+      this->level = level;
+      this->value = level + (typeStatus * 2);
+      this->charRole = charRole;
+   }
 
    // Getters
-   int getLevel();
-   int getValue();
-   int getCharacterRole();
+   int getLevel() { return this->level; }
+   int getValue(){ return this->value; }
+   int getCharacterRole(){ return this->charRole; }
 
    // Virtual Function to be overriden within respective Classes (Weapon, Armor)
-   virtual std::string getName() 
+   virtual std::string getName()
    {
       return "";
    }
@@ -32,10 +46,11 @@ public:
       return true;
    }
 
-   virtual bool TorsoOrLegEquip() 
+   virtual bool TorsoOrLegEquip()
    {
       return 0;
    }
+
 };
 
 #endif

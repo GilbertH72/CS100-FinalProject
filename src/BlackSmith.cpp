@@ -1,9 +1,9 @@
-#include "../header/Warrior.h"
-#include "../header/WarriorAttackStrat.h"
+#include "../header/BlackSmith.h"
+#include "../header/BlackSmithAttackStrat.h"
 
-Warrior::Warrior(std::string, playerType role)
+BlackSmith::BlackSmith(std::string, playerType role)
 {
-   this->attackStrat = new WarriorAttackStrat();
+   this->attackStrat = new BlackSmithAttackStrat();
    this->torsoEQ = nullptr;
    this->legEQ = nullptr;
    this->weaponEQ = nullptr;
@@ -18,7 +18,7 @@ Warrior::Warrior(std::string, playerType role)
    this->maxEXP = 100;
 }
 
-Warrior::~Warrior()
+BlackSmith::~BlackSmith()
 {
    delete attackStrat;
    delete torsoEQ;
@@ -26,7 +26,7 @@ Warrior::~Warrior()
    delete weaponEQ;
 }
 
-int Warrior::attack(Enemy* currentEnemy)
+int BlackSmith::attack(Enemy* currentEnemy)
 {
    try
    {
@@ -40,15 +40,15 @@ int Warrior::attack(Enemy* currentEnemy)
    }
 }
 
-void Warrior::levelUp()
+void BlackSmith::levelUp()
 {
    while (currentEXP >= maxEXP)
    {
       std::cout << "You Leveled up! Congrats!" << std::endl;
       this->maxHP += 3;
       this->currentHP += 3;
-      this->atck += 5;
-      this->defense += 3;
+      this->atck += 3;
+      this->defense += 5;
       this->level += 1;
       this->currentEXP -= this->maxEXP;
       this->maxEXP += 25;
