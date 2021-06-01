@@ -3,6 +3,7 @@
 #include "Enemy_test.h"
 #include "Weapon_test.h"
 #include "Armor_test.h"
+#include "AttackStratTest.h"
 
 int main(int argc, char** argv)
 {

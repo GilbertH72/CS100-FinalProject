@@ -1,13 +1,13 @@
-#ifndef __WARRIOR_H__
-#define __WARRIOR_H__
+#ifndef __MAGE_H__
+#define __MAGE_H__
 
 #include "Player.h"
 
 
-class Warrior : public Player {
+class Mage : public Player {
 
 public:
-   Warrior(std::string, playerType);
+   Mage(std::string, playerType);
    virtual int attack(Enemy* currentEnemy);
    virtual void levelUp();
 
