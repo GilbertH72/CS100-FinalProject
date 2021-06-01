@@ -1,4 +1,4 @@
-#include "warrior.h"
+#include "../header/Warrior.h"
 
 Warrior::Warrior() {
             health = Maxhealth = 100;
