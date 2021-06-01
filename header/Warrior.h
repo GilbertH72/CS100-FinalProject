@@ -3,7 +3,7 @@
 
 #include "Player.h"
 
-class Warrior : public Character 
+class Warrior : public Player 
 {
     public:
         Warrior();
