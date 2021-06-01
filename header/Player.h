@@ -5,8 +5,8 @@
 #include <vector>
 #include "Enemy.h"
 #include "AttackStrategy.h"
-#include "../src/Equips.cpp"
-#include "../src/Heal_Items.cpp"
+#include "Equips.h"
+#include "Heal_Items.h"
 
 enum playerType { WARRIOR, MAGE, BLACKSMITH };
 
@@ -65,7 +65,7 @@ public:
 
    void setDefense(int def) { this->defense += def; }
 
-   void setAttack(int attack) { this->attack += attack; }
+   void setAttack(int attack) { this->atck += attack; }
 
    virtual int attack(Enemy* currentEnemy) = 0;
 
@@ -75,7 +75,7 @@ public:
 
    int getcurrentHP() const { return this->currentHP; }
 
-   int getAttack() const { return this->attack; }
+   int getAttack() const { return this->atck; }
 
    int getDefense() const { return this->defense; }
 

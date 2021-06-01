@@ -8,6 +8,7 @@ class BlackSmith : public Player {
 
 public:
    BlackSmith(std::string, playerType);
+   ~BlackSmith();
    virtual int attack(Enemy* currentEnemy);
    virtual void levelUp();
 

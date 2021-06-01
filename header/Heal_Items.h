@@ -11,12 +11,25 @@ protected:
    int value;
 
 public:
-   Heal_Items();
-   Heal_Items(int level, int typeStatus, std::string name);
-   
-   // Getter Functions
-   int getLevel();
-   int getValue();
-   std::string getName();
+   Heal_Items()
+   {
+      this->level = 1;
+      this->value = 5;
+   }
+
+   Heal_Items(int level, int typeStatus, std::string name)
+   {
+      // Sample calculation for value (Adjustment may be done later on)
+      this->level = level;
+      this->value = level + (typeStatus * 2);
+      this->name = name;
+   }
+
+   // Getters
+   int getLevel() { return this->level; }
+   int getValue() { return this->value; }
+   std::string getName(){ return this->name; }
+
 };
+
 #endif

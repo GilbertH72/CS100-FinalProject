@@ -18,6 +18,14 @@ Warrior::Warrior(std::string, playerType role)
    this->maxEXP = 100;
 }
 
+Warrior::~Warrior()
+{
+   delete attackStrat;
+   delete torsoEQ;
+   delete legEQ;
+   delete weaponEQ;
+}
+
 int Warrior::attack(Enemy* currentEnemy)
 {
    try

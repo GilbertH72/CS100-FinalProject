@@ -18,6 +18,15 @@ Mage::Mage(std::string, playerType role)
    this->maxEXP = 100;
 }
 
+Mage::~Mage()
+{
+   delete attackStrat;
+   delete torsoEQ;
+   delete legEQ;
+   delete weaponEQ;
+}
+
+
 int Mage::attack(Enemy* currentEnemy)
 {
    try

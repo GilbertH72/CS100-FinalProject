@@ -21,14 +21,20 @@ TEST(AttackStratTest, BlackSmithAttackStratLeve1VSDragon)
 {
    Dragon* dragon_1 = new Dragon(1);
    BlackSmith* bSmith_1 = new BlackSmith("Marx", BLACKSMITH);
-   EXPECT_EQ(bSmith_1->attack(dragon_1), 4);
+   EXPECT_EQ(bSmith_1->attack(dragon_1), 2);
+
+   delete dragon_1;
+   delete bSmith_1;
 }
 
 TEST(AttackStratTest, MageAttackStratLeve1VSOrc)
 {
    Orc* orc_1 = new Orc(1);
-   Mage* mage1 = new Mage("Rohan", MAGE);
-   EXPECT_EQ(mage1->attack(orc_1), 2);
+   Mage* mage_1 = new Mage("Rohan", MAGE);
+   EXPECT_EQ(mage_1->attack(orc_1), 2);
+
+   delete orc_1;
+   delete mage_1;
 }
 
 TEST(AttackStratTest, WarriorAttackStratLv1VSGoblin)
@@ -36,6 +42,9 @@ TEST(AttackStratTest, WarriorAttackStratLv1VSGoblin)
    Goblin* goblin_1 = new Goblin(1);
    Warrior* warrior_1 = new Warrior("Kratos", WARRIOR);
    EXPECT_EQ(warrior_1->attack(goblin_1), 2);
+
+   delete goblin_1;
+   delete warrior_1;
 }
 
 TEST(AttackStratTest, BlackSmithAttackStratLeve5VSDragon)
@@ -43,22 +52,32 @@ TEST(AttackStratTest, BlackSmithAttackStratLeve5VSDragon)
    Dragon* dragon_1 = new Dragon(5);
    BlackSmith* bSmith_1 = new BlackSmith("Marx", BLACKSMITH);
    bSmith_1->setcurrentXP(550);
-   EXPECT_EQ(bSmith_1->attack(dragon_1), 41);
+   EXPECT_EQ(bSmith_1->attack(dragon_1), 3);
+
+   delete dragon_1;
+   delete bSmith_1;
+
 }
 
 TEST(AttackStratTest, MageAttackStratLeve5VSSlime)
 {
    Slime* slime_1 = new Slime(5);
-   Mage* mage1 = new Mage("Rohan", MAGE);
-   mage1->setcurrentXP(550);
-   EXPECT_EQ(mage1->attack(slime_1), 13);
+   Mage* mage_1 = new Mage("Rohan", MAGE);
+   mage_1->setcurrentXP(550);
+   EXPECT_EQ(mage_1->attack(slime_1), 3);
+
+   delete slime_1;
+   delete mage_1;
 }
 
 TEST(AttackStratTest, WarriorAttackStratLv5VSSpider) {
    Spider* spider_1 = new Spider(5);
    Warrior* warrior_1 = new Warrior("Scott", WARRIOR);
    warrior_1->setcurrentXP(550);
-   EXPECT_EQ(warrior_1->attack(spider_1), 3);
+   EXPECT_EQ(warrior_1->attack(spider_1), 5);
+
+   delete spider_1;
+   delete warrior_1;
 }
 
 #endif

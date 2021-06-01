@@ -2,7 +2,6 @@
 #define __HEAL_ITEMS_TEST_H__
 
 #include "../header/Heal_Items.h"
-#include "../src/Heal_Items.cpp"
 #include "../header/Elixir.h"
 #include "gtest/gtest.h"
 

@@ -3,7 +3,7 @@
 
 #include "Player.h"
 #include "AttackStrategy.h"
-
+class Player;
 class MageAttackStrat : public AttackStrategy {
 
 public:

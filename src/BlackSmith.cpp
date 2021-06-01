@@ -18,6 +18,14 @@ BlackSmith::BlackSmith(std::string, playerType role)
    this->maxEXP = 100;
 }
 
+BlackSmith::~BlackSmith()
+{
+   delete attackStrat;
+   delete torsoEQ;
+   delete legEQ;
+   delete weaponEQ;
+}
+
 int BlackSmith::attack(Enemy* currentEnemy)
 {
    try

@@ -8,6 +8,7 @@ class Warrior : public Player {
 
 public:
    Warrior(std::string, playerType);
+   ~Warrior();
    virtual int attack(Enemy* currentEnemy);
    virtual void levelUp();
 

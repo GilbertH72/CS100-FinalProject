@@ -6,6 +6,7 @@
 #include <iostream>
 #include <cstdlib>
 
+class Player;
 class AttackStrategy {
 
 public:

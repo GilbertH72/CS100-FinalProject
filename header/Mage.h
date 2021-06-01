@@ -8,6 +8,7 @@ class Mage : public Player {
 
 public:
    Mage(std::string, playerType);
+   ~Mage();
    virtual int attack(Enemy* currentEnemy);
    virtual void levelUp();
 
