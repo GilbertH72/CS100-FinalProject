@@ -1,6 +1,8 @@
 #include "gtest/gtest.h"
 #include "Heal_Items_test.h"
 #include "Enemy_test.h"
+#include "Weapon_test.h"
+#include "Armor_test.h"
 
 int main(int argc, char** argv)
 {
