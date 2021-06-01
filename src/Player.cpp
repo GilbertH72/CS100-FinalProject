@@ -1,4 +1,4 @@
-#include "player.hpp"
+#include "Player.h"
 
 void Player::setPlayerName() {
     std::cout << "What is your name?" << std::endl;
