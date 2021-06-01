@@ -4,6 +4,7 @@
 #include "Weapon_test.h"
 #include "Armor_test.h"
 #include "AttackStratTest.h"
+#include "Game_test.h"
 
 int main(int argc, char** argv)
 {
