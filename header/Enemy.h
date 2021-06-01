@@ -1,5 +1,5 @@
-#ifndef ENEMY_H
-#define ENEMY_H
+#ifndef __ENEMY_H__
+#define __ENEMY_H__
 
 class Enemy {
     private:
