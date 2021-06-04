@@ -1,6 +1,10 @@
-#include <iostream>
+#include "../header/Game.h"
 
-int main() {
-    std::cout << "Hello World!";
+Game* Game::gameInstance = nullptr;
+
+int main()
+{
+    Game* newGame = newGame->getInstance();
+    newGame->startGame();
     return 0;
 }
